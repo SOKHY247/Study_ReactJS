@@ -6,26 +6,44 @@ import React from 'react'
 //                    Allows for safe updates based on the provious state Used with multiple state udpates and            synchrounus functions Good practice to use upadter functions
 import { useState } from 'react'
 function MyComponent() {
-  const [count, setcount] = useState(0)
+  const [car, setcar] = useState(
+    { brand: 'Toyota',
+       model: 'Camry', 
+       year: 2020 
+
+    });
+
+    function updateCar(event){
+      setcar(car => ({
+        ...car, year:
+        event.target.value
+
+      }));
+    }
+   function updateCar(event){
+    setcar(car => ({
+      ...car, brand:
+      event.target.value
+    }))
+   }
+    function updateCar1(event){
+      setcar(car =>({
+        ...car, model:
+        event.target.value
+      }))
+    }
 
 
-  function handleIncrement() {
-    setcount(peices => peices + 1)
-  }
-
-  function handleReset() {
-    setcount(0)
-  }
-  function handleDecrement() {
-    setcount(count - 1)
-  }
 
   return (
     <div>
-      <p>Count: {count}</p>
-      <button onClick={() => handleIncrement()}>Increment</button>
-      <button onClick={() => handleDecrement()}>Decrement</button>
-      <button onClick={() => handleReset()}>Reset</button>
+      <h1>My Car : {car.brand} {car.model} {car.year} </h1>
+      <input type="number" value={car.year} onChange={updateCar}/><br/>
+      <input type="text" value={car.brand} onChange={updateCar}/><br/>
+      <input type="text" value={car.model} onChange={updateCar1}/><br/>
+
+
+
     </div>
 
     
