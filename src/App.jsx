@@ -7,6 +7,7 @@ import Profiles from './Test_reactJs/Profiles.jsx'
 import React_hook from './Test_reactJs/React_hook.jsx'
 import Counter from './Test_reactJs/Counter.jsx'
 import MyComponent from './Test_reactJs/MyComponent.jsx'
+import TodoList from './Test_reactJs/TodoList.jsx'
 
 function App() {
   return(
@@ -19,6 +20,7 @@ function App() {
       <React_hook />
       <Counter />
       <MyComponent/>
+      <TodoList />
 
       {/* <Header/>
       <Food/>
