@@ -9,19 +9,21 @@ import Counter from './Test_reactJs/Counter.jsx'
 import MyComponent from './Test_reactJs/MyComponent.jsx'
 import TodoList from './Test_reactJs/TodoList.jsx'
 import Effect from './Test_reactJs/Effect.jsx'
+import DigitalClock from './Test_reactJs/DigitalClock.jsx'
+
 
 function App() {
   return(
     <div> 
-      <Card/>
+      {/* <Card/>
       <Button/>
     ​​   <Student />
         <UserGeeting isLoaggedIn={true} username = "Sokhy"/>
 
       <React_hook />
       <Counter />
-      <MyComponent/>
-      <Effect/>
+      <MyComponent/> */}
+      <DigitalClock/>
 
       {/* <Header/>
       <Food/>

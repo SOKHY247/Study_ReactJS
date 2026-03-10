@@ -22,36 +22,33 @@ import React, { useEffect , useState} from 'react'
 
 function Effect() {
 
-    const [count, setCount] = useState(0);
-    const [color, setColor] = useState("green");
+  const [width, setwidth] = useState(window.innerWidth);
+  const [height, setheight] = useState(window.innerHeight);
 
 
-    function addCount() {
-      setCount(c => c + 1)
-    }
-    function subtractCount() {
-      setCount(c => c - 1)
-    }
-    function resetCount() {
-      setCount(0)
-    }
-    useEffect(() => {
-        document.title = `Count : ${count} ${color}`;
-    }, [count, color])
-
-    function chagneColor(){
-      setColor(color === "green" ? "red" : "green")
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    console.log("EVENT LISTENER ADDED")
+    return () =>{
+      window.removeEventListener("resize", handleResize);
+      console.log("EVENT LISTENER REMOVED")
 
     }
+  }, []);
 
+  useEffect(() => {
+    document.title = `Size : ${width} x ${height}`;
+  })
+
+  function handleResize(){
+    setwidth(window.innerWidth);
+    setheight(window.innerHeight);
+  }
 
   return (
     <div>
-      <p style={{color : color}}>Count : {count}</p>
-      <button onClick={addCount}>Add</button>
-      <button onClick={resetCount}>Reset</button>
-      <button onClick={subtractCount}>Subtract</button>
-      <button onClick={chagneColor}>change color</button>
+      <p>Width : {width}px</p>
+      <p>Height : {height}px</p>
     </div>
   )
 }
