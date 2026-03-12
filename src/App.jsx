@@ -10,24 +10,13 @@ import MyComponent from './Test_reactJs/MyComponent.jsx'
 import TodoList from './Test_reactJs/TodoList.jsx'
 import Effect from './Test_reactJs/Effect.jsx'
 import DigitalClock from './Test_reactJs/DigitalClock.jsx'
+import ComponentA from './Test_reactJs/componentA.jsx'
 
 
 function App() {
   return(
     <div> 
-      {/* <Card/>
-      <Button/>
-    ​​   <Student />
-        <UserGeeting isLoaggedIn={true} username = "Sokhy"/>
-
-      <React_hook />
-      <Counter />
-      <MyComponent/> */}
-      <DigitalClock/>
-
-      {/* <Header/>
-      <Food/>
-      <Footer/> */}
+      <ComponentA />
     </div>
   )
 }

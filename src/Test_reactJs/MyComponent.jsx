@@ -1,15 +1,20 @@
 import React from 'react'
-
-
-// updater function = A function passed as an argument to the setState() usually 
-//                    ex. seYear(year + 1)
-//                    Allows for safe updates based on the provious state Used with multiple state udpates and            synchrounus functions Good practice to use upadter functions
 import { useState } from 'react'
 
+// useContext()  = React Hook that allows you to share values between multiple levels of components without passing props through each level
 // update list in react js
+
+// Provider components
+// 1. import {createContext} from 'react';
+// 2. export const MyContext = createContext();
+// 3. <MyContext.Provider value ={value}>
+//        <children/>
+//    </MyContext.Provider>
+//
+// Consumer component
+// 1. import {MyContext} from './MyContext';
+// 2. const value = useContext(MyContext);
 function MyComponent() {
-
-
 
   return (
     <div >
