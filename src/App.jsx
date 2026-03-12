@@ -16,7 +16,7 @@ import ComponentA from './Test_reactJs/componentA.jsx'
 function App() {
   return(
     <div> 
-      <ComponentA />
+      <MyComponent/>
     </div>
   )
 }
